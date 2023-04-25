@@ -7,10 +7,10 @@ import java.math.BigInteger;
 
 public class ElThread extends Thread{
 	
-	private static int algoritmo;
-	private static String buscado;
-	private static String sal;
-	private static int cuantoHago;
+	private int algoritmo;
+	private String buscado;
+	private String sal;
+	private int cuantoHago;
 	private String[] letras = new String[]{"a","b","c","d","e","f","g","h","i","j","k","l", "m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 	//private String[] primMitad = new String[]{"a","b","c","d","e","f","g","h","i","j","k","l", "m"};
 	//private String[] segMitad = new String[] {"n","o","p","q","r","s","t","u","v","w","x","y","z"};
@@ -81,12 +81,7 @@ public class ElThread extends Thread{
 							//System.out.println("EY");
 							
 							//System.out.println(cualvoy);
-							try {
-								Thread.sleep(200);
-							} catch (InterruptedException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
+							
 							yaCambie=true;
 							
 						}
@@ -102,12 +97,7 @@ public class ElThread extends Thread{
 			    				
 							
 							//System.out.println(cualvoy);
-							try {
-								Thread.sleep(200);
-							} catch (InterruptedException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
+							
 							yaCambie=true;
 						}
 						
@@ -196,7 +186,7 @@ public class ElThread extends Thread{
 					 verificarHash(cualvoy+sal, cualvoy, startTime);
 					 longitud++;
 					 //System.out.println("JUEPUTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-					 System.out.println(cualvoy);
+					 //System.out.println(cualvoy);
 				 }
 		}
 	}
