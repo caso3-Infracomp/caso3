@@ -122,7 +122,17 @@ public class Principal {
         {
         	ElThread todo = new ElThread(algoritmo, buscado, sal, 3);
         	todo.start();
+        	
         }
+        if(numThreads==2)
+        {
+        	ElThread primeraMitad = new ElThread(algoritmo, buscado, sal, 1);
+        	//ElThread segundaMitad = new ElThread(algoritmo, buscado, sal, 2);
+        	primeraMitad.start();
+        	//segundaMitad.start();
+        	
+        }
+        
 
                 
         sc.close();
