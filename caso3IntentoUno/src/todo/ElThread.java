@@ -54,7 +54,7 @@ public class ElThread extends Thread{
 		String cualvoy = letras[inicio];
 		String inputString = cualvoy.concat(sal);
 		verificarHash(cualvoy+sal, cualvoy, startTime);
-		System.out.println(cualvoy);
+		//System.out.println(cualvoy);
 		
 		while(longitud<8) 
 		{
@@ -145,10 +145,10 @@ public class ElThread extends Thread{
 		String cualvoy = letras[inicio];
 		String inputString = cualvoy.concat(sal);
 		verificarHash(cualvoy+sal, cualvoy, startTime);
-		System.out.println(cualvoy);
+		//System.out.println(cualvoy);
 		
 		
-		while(longitud<4) 
+		while(longitud<8) 
 		{
 			
 				 int centinela =  cualvoy.length();
@@ -166,7 +166,7 @@ public class ElThread extends Thread{
 						 cualvoy=nuevo;
 						 verificarHash(cualvoy+sal, cualvoy, startTime);
 						 longitud++;
-						 System.out.println(cualvoy);
+						 //System.out.println(cualvoy);
 						 yaCambie=true;
 					}
 					else if(!Character.toString(cualvoy.charAt(centinela)).equals("z"))
@@ -180,7 +180,7 @@ public class ElThread extends Thread{
 			    		 }
 			    		 cualvoy= cualvoy.substring(0,centinela)+newLetra + nuevo;
 			    		 verificarHash(cualvoy+sal, cualvoy, startTime);
-			    		 System.out.println(cualvoy);
+			    		 //System.out.println(cualvoy);
 						yaCambie=true;
 						
 					}
@@ -210,9 +210,9 @@ public class ElThread extends Thread{
 		String cualvoy = letras[13];
 		String inputString = cualvoy.concat(sal);
 		verificarHash(cualvoy+sal, cualvoy, startTime);
-		System.out.println(cualvoy);
+		//System.out.println(cualvoy);
 		
-		while(longitud<4) 
+		while(longitud<8) 
 		{
 			if(Character.toString(cualvoy.charAt(cualvoy.length()-1)).equals("z"))
 			  {
@@ -236,7 +236,7 @@ public class ElThread extends Thread{
 							verificarHash(cualvoy+sal, cualvoy, startTime);
 							//System.out.println("EY");
 							
-							System.out.println(cualvoy);
+							//System.out.println(cualvoy);
 							yaCambie=true;
 							
 						}
@@ -251,7 +251,7 @@ public class ElThread extends Thread{
 				    		 verificarHash(cualvoy+sal, cualvoy, startTime);
 			    				
 							
-							System.out.println(cualvoy);
+							//System.out.println(cualvoy);
 							yaCambie=true;
 						}
 						
@@ -267,7 +267,7 @@ public class ElThread extends Thread{
 					 cualvoy=nuevo;
 					 verificarHash(cualvoy+sal, cualvoy, startTime);
 					 longitud++;
-					 System.out.println(cualvoy);
+					 //System.out.println(cualvoy);
 				 }
 			  }
 			  else
@@ -276,7 +276,7 @@ public class ElThread extends Thread{
 				  String newLetra = letras[numAbcdario+1];
 				  cualvoy = cualvoy.substring(0,cualvoy.length()-1)+newLetra;
 				  verificarHash(cualvoy+sal, cualvoy, startTime);
-				  System.out.println(cualvoy);
+				  //System.out.println(cualvoy);
 			  }
 		}
 	}
