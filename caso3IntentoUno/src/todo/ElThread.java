@@ -37,7 +37,7 @@ public class ElThread extends Thread{
 		}
 		else if(cuantoHago==2)
 		{
-			//ejecutarSegundaMitad(startTime);
+			ejecutarSegundaMitad(startTime);
 		}
 		else
 		{
@@ -53,6 +53,8 @@ public class ElThread extends Thread{
 		int longitud = 1;
 		String cualvoy = letras[inicio];
 		String inputString = cualvoy.concat(sal);
+		verificarHash(cualvoy+sal, cualvoy, startTime);
+		System.out.println(cualvoy);
 		
 		while(longitud<8) 
 		{
@@ -142,11 +144,13 @@ public class ElThread extends Thread{
 		int longitud = 1;
 		String cualvoy = letras[inicio];
 		String inputString = cualvoy.concat(sal);
+		verificarHash(cualvoy+sal, cualvoy, startTime);
+		System.out.println(cualvoy);
+		
 		
 		while(longitud<4) 
 		{
-			if(Character.toString(cualvoy.charAt(cualvoy.length()-1)).equals("z"))
-			  {
+			
 				 int centinela =  cualvoy.length();
 				 boolean yaCambie = false;
 				 while(centinela>0 && !yaCambie)
@@ -163,8 +167,9 @@ public class ElThread extends Thread{
 						 verificarHash(cualvoy+sal, cualvoy, startTime);
 						 longitud++;
 						 System.out.println(cualvoy);
+						 yaCambie=true;
 					}
-					if(!Character.toString(cualvoy.charAt(centinela)).equals("z"))
+					else if(!Character.toString(cualvoy.charAt(centinela)).equals("z"))
 					{
 						int numAbcdario = map.get(Character.toString(cualvoy.charAt(centinela)));
 						String newLetra = letras[numAbcdario+1];
@@ -193,18 +198,9 @@ public class ElThread extends Thread{
 					 //System.out.println("JUEPUTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 					 System.out.println(cualvoy);
 				 }
-			  }
-			  else
-			  {
-				  int numAbcdario = map.get(Character.toString(cualvoy.charAt(cualvoy.length()-1)));
-				  String newLetra = letras[numAbcdario+1];
-				  cualvoy = cualvoy.substring(0,cualvoy.length()-1)+newLetra;
-				  verificarHash(cualvoy+sal, cualvoy, startTime);
-				  System.out.println(cualvoy);
-			  }
 		}
 	}
-/*
+
 	private void ejecutarSegundaMitad(long startTime) {
 		// TODO Auto-generated method stub
 		
@@ -213,8 +209,10 @@ public class ElThread extends Thread{
 		int longitud = 1;
 		String cualvoy = letras[13];
 		String inputString = cualvoy.concat(sal);
+		verificarHash(cualvoy+sal, cualvoy, startTime);
+		System.out.println(cualvoy);
 		
-		while(longitud<8) 
+		while(longitud<4) 
 		{
 			if(Character.toString(cualvoy.charAt(cualvoy.length()-1)).equals("z"))
 			  {
@@ -261,7 +259,7 @@ public class ElThread extends Thread{
 				 }
 				 if(!yaCambie)
 				 {
-					 String nuevo="m";
+					 String nuevo="n";
 					 for(int j=0; j<cualvoy.length();j++)
 					 {
 						 nuevo+="a";
@@ -282,7 +280,6 @@ public class ElThread extends Thread{
 			  }
 		}
 	}
-	*/
 
 	public void verificarHash(String inputString, String cualvoy, long startTime) {
 		try {
