@@ -299,6 +299,7 @@ public class ElThread extends Thread{
 		    	  //notifyAll();
 		    	  System.out.println("LO ENCONTRE Y ES: "+cualvoy);
 		    	  System.out.println("LO ENCONTRE EN : "+elapsedTime+" ms");
+		    	  System.out.println("Y SU SAL DADA POR PARAMETRO ES: "+sal);
 		      }
 		}catch (NoSuchAlgorithmException e) {
 		      System.out.println("Error: algoritmo de hashing no encontrado.");
