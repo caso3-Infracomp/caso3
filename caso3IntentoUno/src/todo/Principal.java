@@ -64,7 +64,7 @@ public class Principal {
         header += formatDiv("d-------------------------------------e--------------------------f\n");
         header += formatRow("|   Diego Alejandro Gonzalez Vargas   |         202110240        |\n");
         header += formatDiv("d-------------------------------------e--------------------------f\n");
-        header += formatRow("|    Lindsay Vanessa Pinto Morato     |         20XXXXXXX        |\n");
+        header += formatRow("|    Lindsay Vanessa Pinto Morato     |         202023138        |\n");
         header += formatDiv("d-------------------------------------e--------------------------f\n");
         header += formatRow("|      Luis Angel Angarita Coba       |         20XXXXXXX        |\n");
         header += formatDiv("g-------------------------------------h--------------------------i\n"); 
